@@ -1,0 +1,36 @@
+plugins {
+    id 'groovy'
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '6.1.0'
+}
+
+apply plugin: 'java'
+apply plugin: 'com.github.johnrengelman.shadow'
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+group 'com.dont'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven { url = 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/' }
+    maven { url = "https://oss.sonatype.org/content/repositories/snapshots/" }
+    maven { url = 'https://libraries.minecraft.net/' }
+}
+
+shadowJar {
+    configurations = [project.configurations.compile] // shadow em tudo que estiver como compile
+    destinationDirectory = file("C:/Users/Eduardo/Desktop/WorkSpace/_TestServer/plugins") // diretorio
+    archiveBaseName = 'AtlasGroovyTestPlugin' // nome do arquivo
+    archiveVersion = '' // remove a versão do nome do arquivo
+    archiveClassifier = ''
+
+}
+
+dependencies {
+    compileOnly project(':master')
+    compileOnly 'org.spigotmc:spigot-api:1.8.8-R0.1-SNAPSHOT'
+    compileOnly 'com.mojang:authlib:1.5.21'
+}

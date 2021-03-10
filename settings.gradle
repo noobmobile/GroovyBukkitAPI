@@ -1,0 +1,3 @@
+rootProject.name = 'modelo'
+include 'master'
+include 'slave'

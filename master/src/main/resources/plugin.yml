@@ -1,0 +1,4 @@
+name: AtlasGroovyPlugin
+author: dont
+version: 1.0
+main: com.dont.groovy.Terminal

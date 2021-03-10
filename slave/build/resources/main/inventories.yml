@@ -1,0 +1,52 @@
+arenas:
+  Name: "&5Arenas"
+  Size: 27
+  goToArena:
+    Slot: 10
+    Material: DIAMOND_SWORD
+    Name: "&6Go to Arena"
+  profile:
+    Slot: 11
+    Texture: "{playerName}"
+    Name: "&6You"
+    Lore:
+      - "&7You have killed {playerKills} players."
+  itemTemplate: # if there's no slot, item will be avaliable on inventory.itemTemplate
+    Material: STONE
+    Name: "&6I dont know what i am"
+
+scrollerTest:
+  Name: "&2Scroller Test"
+  Size: 36
+  it1:
+    Slot: 31
+    Material: BARRIER
+    Name: "&cClose"
+  itScroller: # template item
+    Material: STONE # gonna be changed later
+    Name: "&6I'm {materialName}"
+  Scroller: # this whole section is optional, if not provided it'll be used the default settings
+    Slots: 11,12,13,14,15
+    PreviousPage:
+      Slot: 9
+      Material: STAINED_CLAY
+      Data: 14
+      Name: "&aPage <page>"
+    NextPage:
+      Slot: 17
+      Material: STAINED_CLAY
+      Data: 5
+      Name: "&aPage <page>"
+
+items:
+  it1:
+    Material: STONE
+    Chance: 10
+  it2:
+    Material: DIRT
+    Chance: 89.9
+    Commands:
+      - "&7hey yoyo yo"
+  it3:
+    Material: GLASS
+    Chance: 0.1

@@ -1,0 +1,7 @@
+name: AtlasGroovyTestPlugin
+author: dont
+version: 1.0
+main: com.dont.testplugin.Terminal
+depend: [AtlasGroovyPlugin]
+commands:
+  test:
